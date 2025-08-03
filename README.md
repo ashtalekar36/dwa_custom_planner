@@ -77,12 +77,14 @@ sudo apt update && sudo apt install -y \
 
 Create a workspace and clone this repository along with the required TurtleBot3 packages.
 ```bash
-mkdir -p ~/const_ws/src
-cd ~/const_ws/src
+mkdir -p ~/const_ws
+cd ~/const_ws
 
 # Clone this repository
 # Clone custom DWA planner
 git clone https://github.com/ashtalekar36/dwa_custom_planner.git
+
+cd src
 
 # Clone required TurtleBot3 packages
 git clone https://github.com/ROBOTIS-GIT/turtlebot3.git
