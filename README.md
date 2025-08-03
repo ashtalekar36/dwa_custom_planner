@@ -81,9 +81,41 @@ mkdir -p ~/const_ws/src
 cd ~/const_ws/src
 
 # Clone this repository
-git clone [https://github.com/ashtalekar36/dwa_custom_planner.git](https://github.com/ashtalekar36/dwa_custom_planner.git)
+# Clone custom DWA planner
+git clone https://github.com/ashtalekar36/dwa_custom_planner.git
 
 # Clone required TurtleBot3 packages
-git clone [https://github.com/ROBOTIS-GIT/turtlebot3.git](https://github.com/ROBOTIS-GIT/turtlebot3.git)
-git clone [https://github.com/ROBOTIS-GIT/turtlebot3_msgs.git](https://github.com/ROBOTIS-GIT/turtlebot3_msgs.git)
-git clone [https://github.com/ROBOTIS-GIT/turtlebot3_simulations.git](https://github.com/ROBOTIS-GIT/turtlebot3_simulations.git)
+git clone https://github.com/ROBOTIS-GIT/turtlebot3.git
+git clone https://github.com/ROBOTIS-GIT/turtlebot3_msgs.git
+git clone https://github.com/ROBOTIS-GIT/turtlebot3_simulations.git
+```
+2. Install ROS 2 Dependencies
+Navigate to your workspace root and let rosdep install any remaining dependencies.
+```bash
+cd ~/const_ws
+rosdep install --from-paths src --ignore-src -r -y
+```
+3. Build the Workspace
+Build the packages using colcon and source the setup file.
+```bash
+colcon build --symlink-install
+source install/setup.bash
+```
+(Optional) Add the source command to your .bashrc for convenience:
+```bash
+echo "source ~/const_ws/install/setup.bash" >> ~/.bashrc
+```
+4. Set TurtleBot3 Model
+Export the TURTLEBOT3_MODEL environment variable. This project uses burger.
+```bash
+export TURTLEBOT3_MODEL=burger
+```
+(Optional) Add this to your .bashrc as well:
+```bash
+echo "export TURTLEBOT3_MODEL=burger" >> ~/.bashrc
+```
+📡 Running the Simulation
+Launch the entire simulation environment with a single command:
+```bash
+ros2 launch custom_dwa dwa_planner_launch.py
+```
