@@ -69,3 +69,21 @@ sudo apt update && sudo apt install -y \
   ros-humble-nav-msgs \
   ros-humble-visualization-msgs \
   ros-humble-std-msgs
+
+
+🔧 Setup Instructions
+1. Clone the Repository
+
+
+Create a workspace and clone this repository along with the required TurtleBot3 packages.
+```bash
+mkdir -p ~/const_ws/src
+cd ~/const_ws/src
+
+# Clone this repository
+git clone [https://github.com/ashtalekar36/dwa_custom_planner.git](https://github.com/ashtalekar36/dwa_custom_planner.git)
+
+# Clone required TurtleBot3 packages
+git clone [https://github.com/ROBOTIS-GIT/turtlebot3.git](https://github.com/ROBOTIS-GIT/turtlebot3.git)
+git clone [https://github.com/ROBOTIS-GIT/turtlebot3_msgs.git](https://github.com/ROBOTIS-GIT/turtlebot3_msgs.git)
+git clone [https://github.com/ROBOTIS-GIT/turtlebot3_simulations.git](https://github.com/ROBOTIS-GIT/turtlebot3_simulations.git)
