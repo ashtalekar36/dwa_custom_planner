@@ -101,6 +101,7 @@ rosdep install --from-paths src --ignore-src -r -y
 Build the packages using colcon and source the setup file.
 ```bash
 colcon build --symlink-install
+#sometimes it might not get build completely at fierst , try one more time to sucessfullly building it 
 source install/setup.bash
 ```
 (Optional) Add the source command to your .bashrc for convenience:
