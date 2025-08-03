@@ -119,3 +119,30 @@ Launch the entire simulation environment with a single command:
 ```bash
 ros2 launch custom_dwa dwa_planner_launch.py
 ```
+ This will:
+
+Launch Gazebo with the custom world.
+
+Start RViz with a pre-configured layout.
+
+Spawn the TurtleBot3 in the simulation.
+
+Run the custom DWA local planner node.
+
+🕹️ Usage Instructions
+Wait for Gazebo and RViz to fully load.
+
+In the RViz window, use the "2D Nav Goal" tool from the top toolbar to click on a destination.
+
+The robot will begin moving towards the goal.
+
+The robot will sample velocity commands (v,
+omega), evaluate trajectories to find an obstacle-free path, and publish the best command to /cmd_vel. It will stop upon reaching the goal or if it becomes blocked.
+Visualization Tools
+Monitor Velocity Commands: You can inspect the planner's output in a separate terminal:
+
+```bash
+ros2 topic echo /cmd_vel
+```
+RViz Markers: The planner publishes the sampled trajectories as a MarkerArray, which can be visualized in RViz to see how the robot is making its decisio
+
