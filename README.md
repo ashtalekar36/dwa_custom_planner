@@ -146,9 +146,12 @@ ros2 topic echo /cmd_vel
 ```
 RViz Markers: The planner publishes the sampled trajectories as a MarkerArray, which can be visualized in RViz to see how the robot is making its decisio
 
-
+📷 Screenshots
+(Add screenshots or GIFs of your robot navigating in Gazebo and RViz here)
 
 
 Acknowledgements
 This project was inspired by the open-source work of El2ra2 — adapted, extended, and customized for use in TurtleBot3 simulation and academic use.
 
+📄 License
+This project is licensed under the MIT License. Feel free to fork and modify.
