@@ -34,11 +34,7 @@ src/
 ├── turtlebot3_msgs/ # ↓
 └── turtlebot3_simulations/ # ↓
 
-yaml
-Copy
-Edit
 
----
 
 ## 🚀 Features
 
@@ -69,7 +65,7 @@ sudo apt update && sudo apt install -y \
   ros-humble-sensor-msgs \
   ros-humble-nav-msgs \
   ros-humble-visualization-msgs \
-  ros-humble-std-msgs
+  ros-humble-std-msgs```
 🔧 Setup Instructions
 1. Clone the Repository
 bash
