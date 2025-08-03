@@ -49,3 +49,23 @@ src/
 ├── turtlebot3/               # ↓ Required official packages (clone manually)
 ├── turtlebot3_msgs/          # ↓
 └── turtlebot3_simulations/   # ↓
+
+
+---
+
+## 🧩 Dependencies
+
+-   ROS 2 Humble
+-   Gazebo
+-   Python 3
+-   `turtlebot3`, `turtlebot3_msgs`, `turtlebot3_simulations` (cloned manually from source)
+
+Install core ROS 2 dependencies:
+```bash
+sudo apt update && sudo apt install -y \
+  ros-humble-rclpy \
+  ros-humble-geometry-msgs \
+  ros-humble-sensor-msgs \
+  ros-humble-nav-msgs \
+  ros-humble-visualization-msgs \
+  ros-humble-std-msgs
